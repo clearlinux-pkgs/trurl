@@ -6,10 +6,10 @@
 # autospec commit: 5905be9
 #
 Name     : trurl
-Version  : 0.11
-Release  : 5
-URL      : https://github.com/curl/trurl/archive/trurl-0.11/trurl-0.11.tar.gz
-Source0  : https://github.com/curl/trurl/archive/trurl-0.11/trurl-0.11.tar.gz
+Version  : 0.12
+Release  : 6
+URL      : https://github.com/curl/trurl/archive/trurl-0.12/trurl-0.12.tar.gz
+Source0  : https://github.com/curl/trurl/archive/trurl-0.12/trurl-0.12.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause MIT
@@ -33,10 +33,10 @@ license components for the trurl package.
 
 
 %prep
-%setup -q -n trurl-trurl-0.11
-cd %{_builddir}/trurl-trurl-0.11
+%setup -q -n trurl-trurl-0.12
+cd %{_builddir}/trurl-trurl-0.12
 pushd ..
-cp -a trurl-trurl-0.11 buildavx2
+cp -a trurl-trurl-0.12 buildavx2
 popd
 
 %build
@@ -44,7 +44,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1713463007
+export SOURCE_DATE_EPOCH=1713545639
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -87,7 +87,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1713463007
+export SOURCE_DATE_EPOCH=1713545639
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/trurl
 cp %{_builddir}/trurl-trurl-%{version}/COPYING %{buildroot}/usr/share/package-licenses/trurl/ee07057bbf567b3d4925a32a37148a7cbf422acd || :
