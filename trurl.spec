@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : trurl
-Version  : 0.15.1
-Release  : 9
-URL      : https://github.com/curl/trurl/archive/trurl-0.15.1/trurl-0.15.1.tar.gz
-Source0  : https://github.com/curl/trurl/archive/trurl-0.15.1/trurl-0.15.1.tar.gz
+Version  : 0.16
+Release  : 10
+URL      : https://github.com/curl/trurl/archive/trurl-0.16/trurl-0.16.tar.gz
+Source0  : https://github.com/curl/trurl/archive/trurl-0.16/trurl-0.16.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -20,7 +20,7 @@ BuildRequires : curl-dev
 %define debug_package %{nil}
 
 %description
-# [![trurl logo](https://curl.se/trurl/trurl-logo.svg)](https://curl.se/trurl)
+# [![trurl logo](https://curl.se/logo/trurl-logo.svg)](https://curl.se/trurl)
 # trurl
 
 %package license
@@ -32,10 +32,10 @@ license components for the trurl package.
 
 
 %prep
-%setup -q -n trurl-trurl-0.15.1
-cd %{_builddir}/trurl-trurl-0.15.1
+%setup -q -n trurl-trurl-0.16
+cd %{_builddir}/trurl-trurl-0.16
 pushd ..
-cp -a trurl-trurl-0.15.1 buildavx2
+cp -a trurl-trurl-0.16 buildavx2
 popd
 
 %build
@@ -43,7 +43,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1726149219
+export SOURCE_DATE_EPOCH=1726759731
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -86,7 +86,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1726149219
+export SOURCE_DATE_EPOCH=1726759731
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/trurl
 cp %{_builddir}/trurl-trurl-%{version}/LICENSES/curl.txt %{buildroot}/usr/share/package-licenses/trurl/e1dd2afe055a4bc3bdad6031fc1d93bf5039e6cf || :
